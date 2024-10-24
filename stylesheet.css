@@ -101,6 +101,10 @@ a {
   font-family: "sofia_prolight";
 }
 
+.sofia_promedium {
+  font-family: "sofia_promedium";
+}
+
 .palmer_lake_printregular {
   font-family: "palmer_lake_printregular";
 }
@@ -119,6 +123,10 @@ a {
   font-size: 1.7rem;
   border-radius: 9px;
   padding: 0 8rem;
+}
+
+.radius-5 {
+  border-radius: 5px;
 }
 
 header {
@@ -203,6 +211,9 @@ main .main-row {
   max-width: 744px;
   margin-inline: auto;
 }
+main section {
+  padding: 24px 0 36px;
+}
 main .okay-humans {
   padding-bottom: 6rem;
 }
@@ -223,6 +234,7 @@ main h6 {
   align-items: center;
   gap: 24px;
   margin: 24px 0;
+  letter-spacing: 1.7px;
 }
 main h6::after, main h6::before {
   content: "";
@@ -254,15 +266,9 @@ main .our-story .christy-layer {
   background: url(./images/christy-layer.svg) no-repeat right center;
   padding: 0 15px 15px 0;
 }
-main .our-story .christy-layer img {
-  border-radius: 5px;
-}
 main .our-story .otherPeople-layer {
   background: url(./images/otherPeople-layer.svg) no-repeat right center;
   padding: 0 15px 15px 0;
-}
-main .our-story .otherPeople-layer img {
-  border-radius: 5px;
 }
 main .our-story .our-story-note {
   font-size: 2.8rem;
@@ -279,4 +285,78 @@ main .how-it-works .work-title {
 }
 main .how-it-works img {
   align-self: center;
+}
+main .how-it-works .button {
+  margin: 4rem auto 0;
+}
+main .operating-partner {
+  color: #2f6079;
+}
+main .operating-partner .sub-note {
+  margin: 24px 0 24px;
+  font-size: 1.6rem;
+}
+main .operating-partner ol {
+  counter-reset: num;
+  position: relative;
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+}
+main .operating-partner ol li {
+  position: relative;
+  padding-left: 36px;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+main .operating-partner ol li::before {
+  content: counter(num);
+  counter-increment: num;
+  background: url(./images/bullet.svg) no-repeat 0 -4px;
+  width: 24px;
+  height: 23px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-content: center;
+  font-family: "sofia_probold";
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+main .design-n-const {
+  display: grid;
+  gap: 24px;
+}
+main .training-n-support {
+  color: #2f6079;
+}
+main .training-n-support .sub-note {
+  margin: 24px 0 24px;
+  font-size: 1.6rem;
+}
+main .training-n-support ol {
+  position: relative;
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+}
+main .training-n-support ol li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+main .training-n-support ol li::before {
+  content: "";
+  background: #9fc4d4;
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  left: 0;
+  top: 8px;
+  border-radius: 50%;
 }/*# sourceMappingURL=stylesheet.css.map */

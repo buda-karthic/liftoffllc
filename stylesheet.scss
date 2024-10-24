@@ -98,6 +98,10 @@ a {
 .sofia_prolight {
   font-family: "sofia_prolight";
 }
+.sofia_promedium {
+  font-family: "sofia_promedium";
+}
+
 .palmer_lake_printregular {
   font-family: "palmer_lake_printregular";
 }
@@ -119,6 +123,9 @@ a {
   font-size: 1.7rem;
   border-radius: 9px;
   padding: 0 8rem;
+}
+.radius-5 {
+  border-radius: 5px;
 }
 //common styles ends
 header {
@@ -206,6 +213,9 @@ main {
     max-width: 744px;
     margin-inline: auto;
   }
+  section {
+    padding: 24px 0 36px;
+  }
   .okay-humans {
     padding-bottom: 6rem;
     .button {
@@ -225,6 +235,7 @@ main {
     align-items: center;
     gap: 24px;
     margin: 24px 0;
+    letter-spacing: 1.7px;
     &::after,
     &::before {
       content: "";
@@ -255,16 +266,10 @@ main {
     .christy-layer {
       background: url(./images/christy-layer.svg) no-repeat right center;
       padding: 0 15px 15px 0;
-      img {
-        border-radius: 5px;
-      }
     }
     .otherPeople-layer {
       background: url(./images/otherPeople-layer.svg) no-repeat right center;
       padding: 0 15px 15px 0;
-      img {
-        border-radius: 5px;
-      }
     }
     .our-story-note {
       font-size: 2.8rem;
@@ -280,6 +285,76 @@ main {
     }
     img {
       align-self: center;
+    }
+    .button {
+      margin: 4rem auto 0;
+    }
+  }
+  .operating-partner {
+    color: $theme-primary-light;
+    .sub-note {
+      margin: 24px 0 24px;
+      font-size: 1.6rem;
+    }
+    ol {
+      counter-reset: num;
+      position: relative;
+      column-count: 2;
+      column-gap: 24px;
+      li {
+        position: relative;
+        padding-left: 36px;
+        margin-bottom: 15px;
+        font-size: 1.6rem;
+        &::before {
+          content: counter(num);
+          counter-increment: num;
+          background: url(./images/bullet.svg) no-repeat 0 -4px;
+          width: 24px;
+          height: 23px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: grid;
+          place-content: center;
+          font-family: "sofia_probold";
+          color: #fff;
+          font-size: 1.5rem;
+          line-height: 1;
+        }
+      }
+    }
+  }
+  .design-n-const {
+    display: grid;
+    gap: 24px;
+  }
+  .training-n-support {
+    color: $theme-primary-light;
+    .sub-note {
+      margin: 24px 0 24px;
+      font-size: 1.6rem;
+    }
+    ol {
+      position: relative;
+      column-count: 2;
+      column-gap: 24px;
+      li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 15px;
+        font-size: 1.6rem;
+        &::before {
+          content: "";
+          background: $blue-300;
+          width: 7px;
+          height: 7px;
+          position: absolute;
+          left: 0;
+          top: 8px;
+          border-radius: 50%;
+        }
+      }
     }
   }
 }

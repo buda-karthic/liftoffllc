@@ -10,6 +10,7 @@ $blue-100: #cadbe4;
 $blue-300: #9fc4d4;
 $blue-50: #cddbe3;
 $grey-100: #979797;
+$grey-50: #aaafb2;
 
 html {
   font-size: 62.5%;
@@ -78,6 +79,9 @@ a {
   }
   &.gap-2 {
     gap: 2rem;
+  }
+  &.gap-2d4 {
+    gap: 2.4rem;
   }
   &.gap-2d5 {
     gap: 2.5rem;
@@ -353,6 +357,37 @@ main {
           left: 0;
           top: 8px;
           border-radius: 50%;
+        }
+      }
+    }
+  }
+  .sign-me-up {
+    .form-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      .form-group {
+        label {
+          color: $theme-primary-light;
+          font-family: "sofia_promedium";
+          font-size: 1.6rem;
+          display: block;
+          margin-bottom: 8px;
+        }
+        input {
+          width: 100%;
+          max-width: 100%;
+          border: 1px solid rgba(0, 0, 0, 0.08);
+          height: 35px;
+          line-height: 35px;
+          padding: 0 15px;
+          border-radius: 8px;
+          box-sizing: border-box;
+          &::placeholder {
+            color: $grey-50;
+            font-family: "sofia_proregular";
+            font-size: 1.6rem;
+          }
         }
       }
     }

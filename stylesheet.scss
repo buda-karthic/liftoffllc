@@ -1,0 +1,285 @@
+$theme-primary: #15364c;
+$theme-primary-light: #2f6079;
+$yellow-50: #f9f6f4;
+$yellow-100: #e7e1d9;
+$yellow-200: #e9e1d7;
+$pink-100: #edcfcc;
+$pink-50: #e8d0cd;
+$blue-200: #a6c3d2;
+$blue-100: #cadbe4;
+$blue-300: #9fc4d4;
+$blue-50: #cddbe3;
+$grey-100: #979797;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "ralewayregular";
+  font-size: 1.4rem;
+  color: $theme-primary;
+  line-height: 1.4;
+}
+.row {
+  margin-inline: auto;
+  max-width: 1440px;
+  display: block;
+  width: 100%;
+}
+
+// common styles starts
+a {
+  text-decoration: none;
+}
+.yellow-50-bg {
+  background: $yellow-50;
+}
+.yellow-100 {
+  color: $yellow-100;
+}
+.yellow-100-bg {
+  background: $yellow-100;
+}
+.yellow-200 {
+  color: $yellow-200;
+}
+.pink-100 {
+  color: $pink-100;
+}
+.pink-50-bg {
+  background: $pink-50;
+}
+.blue-50 {
+  color: $blue-50;
+}
+.blue-50-bg {
+  background: $blue-50;
+}
+.blue-100 {
+  color: $blue-100;
+}
+.blue-200 {
+  color: $blue-200;
+}
+.blue-200-bg {
+  background: $blue-200;
+}
+.blue-300 {
+  color: $blue-300;
+}
+.add-flex {
+  display: flex;
+  &.direction-column {
+    flex-direction: column;
+  }
+  &.gap-1 {
+    gap: 1rem;
+  }
+  &.gap-2 {
+    gap: 2rem;
+  }
+  &.gap-2d5 {
+    gap: 2.5rem;
+  }
+  &.gap-02 {
+    gap: 0.02em;
+  }
+  &.gap-3 {
+    gap: 3rem;
+  }
+  &.gap-3d5 {
+    gap: 3.5rem;
+  }
+}
+.text-center {
+  text-align: center;
+}
+.sofia_prolight {
+  font-family: "sofia_prolight";
+}
+.palmer_lake_printregular {
+  font-family: "palmer_lake_printregular";
+}
+.raleway-800 {
+  font-family: "Raleway";
+  font-weight: 800;
+}
+@mixin raleway-800 {
+  font-family: "Raleway";
+  font-weight: 800;
+}
+
+.button {
+  background: $pink-50;
+  border: 0;
+  height: 40px;
+  line-height: 40px;
+  font-family: "brandon_grotesquebold";
+  font-size: 1.7rem;
+  border-radius: 9px;
+  padding: 0 8rem;
+}
+//common styles ends
+header {
+  position: relative;
+
+  .header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 15px;
+    > div {
+      flex: 1;
+    }
+    .book {
+      font-family: "brandon_grotesquebold";
+      font-size: 1.7rem;
+      a {
+        color: #fff;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+        letter-spacing: 0.2em;
+      }
+    }
+    .logo {
+      text-align: center;
+    }
+    .hamburger-wrapper {
+      display: flex;
+      flex-direction: row-reverse;
+      cursor: pointer;
+      .hamburger {
+        &::after,
+        &::before {
+          content: "";
+          width: 23px;
+          height: 2px;
+          background: #fff;
+          display: block;
+        }
+        span {
+          width: 23px;
+          height: 2px;
+          background: #fff;
+          display: block;
+          margin: 6px 0;
+        }
+      }
+    }
+  }
+}
+.theme-section {
+  background: $theme-primary;
+  min-height: calc(100vh - 12px);
+  position: relative;
+  display: grid;
+  place-content: center;
+  .logoWrapper {
+    font-weight: bold;
+    font-size: 12rem;
+    display: grid;
+    place-items: center;
+    line-height: 1.1;
+  }
+  .indicator {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+.color-bar {
+  display: flex;
+  > div {
+    flex: 1;
+    height: 12px;
+  }
+}
+
+main {
+  .main-row {
+    max-width: 744px;
+    margin-inline: auto;
+  }
+  .okay-humans {
+    padding-bottom: 6rem;
+    .button {
+      margin-top: 4rem;
+    }
+  }
+  h2 {
+    font-size: 3.6rem;
+    margin: 1.5em 0 1em;
+    @include raleway-800;
+    text-shadow: 2px 2px $pink-50;
+  }
+  h6 {
+    font-family: "brandon_grotesquemedium";
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 24px 0;
+    &::after,
+    &::before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: $grey-100;
+      flex: 1;
+      opacity: 0.23;
+    }
+  }
+  .body-text {
+    font-size: 1.6rem;
+    color: $theme-primary-light;
+    font-family: "sofia_prolight";
+    letter-spacing: 0.17px;
+    line-height: 1.65;
+  }
+  .our-story {
+    padding: 24px 0 36px;
+    display: grid;
+    gap: 24px;
+    color: $theme-primary-light;
+    a {
+      color: $theme-primary-light;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .christy-layer {
+      background: url(./images/christy-layer.svg) no-repeat right center;
+      padding: 0 15px 15px 0;
+      img {
+        border-radius: 5px;
+      }
+    }
+    .otherPeople-layer {
+      background: url(./images/otherPeople-layer.svg) no-repeat right center;
+      padding: 0 15px 15px 0;
+      img {
+        border-radius: 5px;
+      }
+    }
+    .our-story-note {
+      font-size: 2.8rem;
+    }
+  }
+  .how-it-works {
+    padding: 24px 0 36px;
+    display: grid;
+    gap: 24px;
+    .work-title {
+      @include raleway-800;
+      font-size: 2.3rem;
+    }
+    img {
+      align-self: center;
+    }
+  }
+}

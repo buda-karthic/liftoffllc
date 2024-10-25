@@ -306,18 +306,17 @@ header {
   padding-inline: 15px;
 }
 section {
-  padding: 24px 0 36px;
+  padding: 3.6rem 0 6rem;
 }
 main {
   .okay-humans {
-    padding-bottom: 6rem;
     .button {
       margin-top: 4rem;
     }
   }
   h2 {
     font-size: 3.6rem;
-    margin: 1.5em 0 1em;
+    margin: 1em 0 1em;
     @include raleway-800;
     text-shadow: 2px 2px $pink-50;
   }
@@ -372,7 +371,6 @@ main {
     }
   }
   .how-it-works {
-    padding-block: 24px 36px;
     display: grid;
     gap: 24px;
     .work-title {
@@ -522,7 +520,7 @@ footer {
     gap: 12rem;
     margin-top: 12px;
     @include respondTo(xs) {
-      flex-wrap: wrap;
+      flex-direction: column;
       text-align: center;
       gap: 4rem;
       img {

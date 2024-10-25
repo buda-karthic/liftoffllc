@@ -241,18 +241,15 @@ header .header .hamburger-wrapper .hamburger span {
 }
 
 section {
-  padding: 24px 0 36px;
+  padding: 3.6rem 0 6rem;
 }
 
-main .okay-humans {
-  padding-bottom: 6rem;
-}
 main .okay-humans .button {
   margin-top: 4rem;
 }
 main h2 {
   font-size: 3.6rem;
-  margin: 1.5em 0 1em;
+  margin: 1em 0 1em;
   font-family: "Raleway";
   font-weight: 800;
   text-shadow: 2px 2px #e8d0cd;
@@ -309,7 +306,6 @@ main .our-story .our-story-note {
   font-size: 2.8rem;
 }
 main .how-it-works {
-  padding-block: 24px 36px;
   display: grid;
   gap: 24px;
 }
@@ -481,7 +477,7 @@ footer .footer-wrapper {
 }
 @media only screen and (max-width: 767px) {
   footer .footer-wrapper {
-    flex-wrap: wrap;
+    flex-direction: column;
     text-align: center;
     gap: 4rem;
   }

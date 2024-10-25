@@ -231,6 +231,7 @@ header .header .hamburger-wrapper .hamburger span {
   display: grid;
   place-items: center;
   line-height: 1.1;
+  transform: translateY(-63px);
 }
 .theme-section .indicator {
   position: absolute;

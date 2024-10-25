@@ -295,6 +295,7 @@ header {
     display: grid;
     place-items: center;
     line-height: 1.1;
+    transform: translateY(-63px);
   }
   .indicator {
     position: absolute;

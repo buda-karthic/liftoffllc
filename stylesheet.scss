@@ -1,3 +1,7 @@
+nav {
+  display: none;
+}
+
 $theme-primary: #15364c;
 $theme-primary-light: #2f6079;
 $yellow-50: #f9f6f4;
@@ -220,6 +224,7 @@ $screen-md-max: ($screen-lg-min - 1);
   padding: 0 8rem;
   display: inline-block;
   color: $theme-primary;
+  cursor: pointer;
 }
 .radius-5 {
   border-radius: 5px;
@@ -239,6 +244,9 @@ header {
     .book {
       font-family: "brandon_grotesquebold";
       font-size: 1.7rem;
+      @include respondTo(xs) {
+        display: none;
+      }
       a {
         color: #fff;
         text-decoration: underline;
@@ -248,12 +256,14 @@ header {
     }
     .logo {
       text-align: center;
+      font-size: 0;
     }
     .hamburger-wrapper {
       display: flex;
       flex-direction: row-reverse;
-      cursor: pointer;
+
       .hamburger {
+        cursor: pointer;
         &::after,
         &::before {
           content: "";

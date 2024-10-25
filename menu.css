@@ -1,0 +1,87 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #ffffff;
+  transition: 0.3s;
+  padding-top: 60px;
+  z-index: 1000;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  font-family: "brandon_grotesquebold";
+}
+
+.sidebar a {
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #15364c;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a i {
+  margin-right: 10px;
+}
+
+/* Close button inside sidebar */
+.sidebar .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 36px;
+  cursor: pointer;
+  color: #15364c;
+  font-family: "sofia_prolight";
+}
+
+/* Overlay to cover the rest of the screen when sidebar is active */
+.overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Show sidebar */
+.sidebar.active {
+  left: 0;
+}
+
+/* Show overlay */
+.overlay.active {
+  display: block;
+}
+
+.submenu a {
+  padding-left: 40px;
+}
+
+.plusicon {
+  transition: transform 0.3s ease;
+}
+
+.plusicon.rotate {
+  transform: rotate(45deg);
+}
+
+@media only screen and (max-width: 767px) {
+  nav {
+    display: block !important;
+  }
+}/*# sourceMappingURL=menu.css.map */

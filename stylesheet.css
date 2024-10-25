@@ -11,9 +11,10 @@ body {
 
 .row {
   margin-inline: auto;
-  max-width: 1440px;
+  max-width: 1470px;
   display: block;
   width: 100%;
+  padding: 0 15px;
 }
 
 a {
@@ -86,14 +87,17 @@ img {
 .add-flex.direction-column {
   flex-direction: column;
 }
+.add-flex.align-center {
+  align-items: center;
+}
+.add-flex.justify-center {
+  justify-content: center;
+}
 .add-flex.flex-1 > * {
   flex: 1;
 }
 .add-flex .flex-1 {
   flex: 1;
-}
-.add-flex.justify-center {
-  justify-content: center;
 }
 .add-flex.gap-1 {
   gap: 1rem;
@@ -157,16 +161,13 @@ img {
 
 header {
   position: relative;
+  background: #15364c;
 }
 header .header {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
   display: flex;
   width: 100%;
   align-items: center;
-  margin-top: 15px;
+  height: 63px;
 }
 header .header > div {
   flex: 1;
@@ -206,7 +207,7 @@ header .header .hamburger-wrapper .hamburger span {
 
 .theme-section {
   background: #15364c;
-  min-height: calc(100vh - 12px);
+  min-height: calc(100dvh - 75px);
   position: relative;
   display: grid;
   place-content: center;
@@ -234,8 +235,9 @@ header .header .hamburger-wrapper .hamburger span {
 }
 
 .main-row {
-  max-width: 744px;
+  max-width: 774px;
   margin-inline: auto;
+  padding-inline: 15px;
 }
 
 section {
@@ -264,6 +266,11 @@ main h6 {
   margin: 24px 0;
   letter-spacing: 1.7px;
 }
+@media only screen and (max-width: 767px) {
+  main h6 {
+    font-size: 1.8rem;
+  }
+}
 main h6::after, main h6::before {
   content: "";
   width: 100%;
@@ -280,7 +287,7 @@ main .body-text {
   line-height: 1.65;
 }
 main .our-story {
-  padding: 24px 0 36px;
+  padding-block: 24px 36px;
   display: grid;
   gap: 24px;
   color: #2f6079;
@@ -302,7 +309,7 @@ main .our-story .our-story-note {
   font-size: 2.8rem;
 }
 main .how-it-works {
-  padding: 24px 0 36px;
+  padding-block: 24px 36px;
   display: grid;
   gap: 24px;
 }
@@ -327,10 +334,14 @@ main .operating-partner .sub-note {
 main .operating-partner ol {
   counter-reset: num;
   position: relative;
-  -moz-column-count: 2;
-       column-count: 2;
   -moz-column-gap: 24px;
        column-gap: 24px;
+}
+@media only screen and (min-width: 768px) {
+  main .operating-partner ol {
+    -moz-column-count: 2;
+         column-count: 2;
+  }
 }
 main .operating-partner ol li {
   position: relative;
@@ -367,10 +378,14 @@ main .training-n-support .sub-note {
 }
 main .training-n-support ol {
   position: relative;
-  -moz-column-count: 2;
-       column-count: 2;
   -moz-column-gap: 24px;
        column-gap: 24px;
+}
+@media only screen and (min-width: 768px) {
+  main .training-n-support ol {
+    -moz-column-count: 2;
+         column-count: 2;
+  }
 }
 main .training-n-support ol li {
   position: relative;
@@ -390,9 +405,15 @@ main .training-n-support ol li::before {
 }
 main .sign-me-up .form-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 24px;
   margin-top: 24px;
+  -moz-column-count: 2;
+       column-count: 2;
+}
+@media only screen and (min-width: 768px) {
+  main .sign-me-up .form-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 main .sign-me-up .form-wrapper .full-width {
   grid-column: 1/-1;
@@ -448,7 +469,11 @@ main .sign-me-up .form-wrapper .form-group textarea {
 
 footer {
   background: #15364c;
-  margin-top: 100px;
+}
+@media only screen and (min-width: 768px) {
+  footer {
+    margin-top: 100px;
+  }
 }
 footer .footer-wrapper {
   gap: 12rem;
@@ -457,6 +482,11 @@ footer .footer-wrapper {
 @media only screen and (max-width: 767px) {
   footer .footer-wrapper {
     flex-wrap: wrap;
+    text-align: center;
+    gap: 4rem;
+  }
+  footer .footer-wrapper img {
+    margin-top: 15px;
   }
 }
 footer ul {
@@ -476,6 +506,16 @@ footer ul li ~ li {
 @media only screen and (max-width: 767px) {
   .add-flex {
     flex-wrap: wrap;
+  }
+  .button {
+    padding: 0 2rem;
+    font-size: 1.3rem;
+  }
+  header .header .book {
+    font-size: 1rem;
+  }
+  header .header .book a {
+    text-decoration: none;
   }
   .theme-section .logoWrapper {
     font-size: 5rem;

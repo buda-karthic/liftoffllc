@@ -24,9 +24,10 @@ body {
 }
 .row {
   margin-inline: auto;
-  max-width: 1440px;
+  max-width: 1470px;
   display: block;
   width: 100%;
+  padding: 0 15px;
 }
 
 // common styles starts
@@ -84,6 +85,12 @@ img {
   &.direction-column {
     flex-direction: column;
   }
+  &.align-center {
+    align-items: center;
+  }
+  &.justify-center {
+    justify-content: center;
+  }
   &.flex-1 {
     > * {
       flex: 1;
@@ -92,9 +99,7 @@ img {
   .flex-1 {
     flex: 1;
   }
-  &.justify-center {
-    justify-content: center;
-  }
+
   &.gap-1 {
     gap: 1rem;
   }
@@ -222,16 +227,12 @@ $screen-md-max: ($screen-lg-min - 1);
 //common styles ends
 header {
   position: relative;
-
+  background: $theme-primary;
   .header {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
     display: flex;
     width: 100%;
     align-items: center;
-    margin-top: 15px;
+    height: 63px;
     > div {
       flex: 1;
     }
@@ -274,7 +275,7 @@ header {
 }
 .theme-section {
   background: $theme-primary;
-  min-height: calc(100vh - 12px);
+  min-height: calc(100dvh - 75px);
   position: relative;
   display: grid;
   place-content: center;
@@ -300,8 +301,9 @@ header {
   }
 }
 .main-row {
-  max-width: 744px;
+  max-width: 774px;
   margin-inline: auto;
+  padding-inline: 15px;
 }
 section {
   padding: 24px 0 36px;
@@ -327,6 +329,9 @@ main {
     gap: 24px;
     margin: 24px 0;
     letter-spacing: 1.7px;
+    @include respondTo(xs) {
+      font-size: 1.8rem;
+    }
     &::after,
     &::before {
       content: "";
@@ -345,7 +350,7 @@ main {
     line-height: 1.65;
   }
   .our-story {
-    padding: 24px 0 36px;
+    padding-block: 24px 36px;
     display: grid;
     gap: 24px;
     color: $theme-primary-light;
@@ -367,7 +372,7 @@ main {
     }
   }
   .how-it-works {
-    padding: 24px 0 36px;
+    padding-block: 24px 36px;
     display: grid;
     gap: 24px;
     .work-title {
@@ -390,8 +395,10 @@ main {
     ol {
       counter-reset: num;
       position: relative;
-      column-count: 2;
       column-gap: 24px;
+      @include respondToAbove(sm) {
+        column-count: 2;
+      }
       li {
         position: relative;
         padding-left: 36px;
@@ -428,8 +435,10 @@ main {
     }
     ol {
       position: relative;
-      column-count: 2;
       column-gap: 24px;
+      @include respondToAbove(sm) {
+        column-count: 2;
+      }
       li {
         position: relative;
         padding-left: 20px;
@@ -451,9 +460,12 @@ main {
   .sign-me-up {
     .form-wrapper {
       display: grid;
-      grid-template-columns: 1fr 1fr;
       gap: 24px;
       margin-top: 24px;
+      column-count: 2;
+      @include respondToAbove(sm) {
+        grid-template-columns: 1fr 1fr;
+      }
       .full-width {
         grid-column: 1/-1;
       }
@@ -502,12 +514,20 @@ main {
 }
 footer {
   background: $theme-primary;
-  margin-top: 100px;
+
+  @include respondToAbove(sm) {
+    margin-top: 100px;
+  }
   .footer-wrapper {
     gap: 12rem;
     margin-top: 12px;
     @include respondTo(xs) {
       flex-wrap: wrap;
+      text-align: center;
+      gap: 4rem;
+      img {
+        margin-top: 15px;
+      }
     }
   }
   ul {
@@ -532,6 +552,20 @@ footer {
 @include respondTo(xs) {
   .add-flex {
     flex-wrap: wrap;
+  }
+  .button {
+    padding: 0 2rem;
+    font-size: 1.3rem;
+  }
+  header {
+    .header {
+      .book {
+        font-size: 1rem;
+        a {
+          text-decoration: none;
+        }
+      }
+    }
   }
   .theme-section {
     .logoWrapper {

@@ -538,6 +538,9 @@ footer {
         margin-top: 15px;
       }
     }
+    @include respondToTablet() {
+      gap: 3rem;
+    }
   }
   ul {
     padding: 0 15px;

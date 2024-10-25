@@ -499,6 +499,11 @@ footer .footer-wrapper {
     margin-top: 15px;
   }
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  footer .footer-wrapper {
+    gap: 3rem;
+  }
+}
 footer ul {
   padding: 0 15px;
 }
